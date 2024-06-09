@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pylon of the Mass</title>
+
+    <link rel="stylesheet" href="style/icon.css"/>
+    <link rel="stylesheet" href="style/main.css">
+
+    <script src="js/break_eternity.js"></script>
+    <script src="js/format.js"></script>
+    <script src="js/formulas.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="js/module/currencies.js"></script>
+    <script src="js/module/upgrades.js"></script>
+    <script src="js/module/challenges.js"></script>
+    <script src="js/module/grid-element.js"></script>
+
+    <script src="js/temp.js"></script>
+    <script src="js/calc.js"></script>
+
+    <script src="js/element.js"></script>
+
+    <script src="js/save.js"></script>
+    <script src="js/load.js"></script>
+</head>
+<body onload="loadGame()">
+    <input id="copy" style="position: absolute; top: 0; left: 0; user-select: all; visibility: hidden;">
+    <div id="app">
+        <canvas id="canvas-path"></canvas>
+        <div id="grid-elements"></div>
+        <div id="pin-div">
+            <div id="tabs-div" class="table-left"></div>
+            <div id="infos-div" style="display: none;">
+                <button id="close-tab-button" onclick="switchTab(-1)">×</button>
+            </div>
+        </div>
+        <img id="ring" src="style/ring.png" draggable="false" style="display: none;">
+        <div id="center-div">
+            <div id="typewritting-text" class="strange-text"></div>
+            <div id="the-end" style="display: none;">
+                <p><h1 class="strange-text">[Chapter 0] Completed...</h1></p>
+                <div id="the-end-div" style="opacity: 0; transition: opacity 3s;">
+                    <p>Congratulations! You completed the game in <b id="time-text">0</b>. Thanks for playing!</p>
+                    <div class="table-center">
+                        <button onclick="wipeConfirm()">Replay the game</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mass-div" style="display: none; opacity: 0;">
+            <p><h2 id="mass-text">0</h2> g of mass</p>
+            <button id="rank-btn" onclick="true_end()">Rank up.<br>Require: 10 g of mass</button>
+        </div>
+    </div>
+</body>
+</html>

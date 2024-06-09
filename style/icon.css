@@ -1,0 +1,33 @@
+@font-face {
+    font-family: "Iconly";
+    src: url("iconly.ttf");
+}
+  
+[class="iconly"], [class^="iconly-"], [class*=" iconly-"] {
+    display: inline-block;
+    font-family: "Iconly" !important;
+}
+  
+.iconly-bolt:before {
+    content: "\e000";
+}
+
+.iconly-bolt-refined:before {
+    content: "\e001";
+}
+
+.iconly-star:before {
+    content: "\e002";
+}
+
+.iconly-nova:before {
+    content: "\e003";
+}
+
+.iconly-delta:before {
+    content: "\e004";
+}
+
+.iconly-infinity:before {
+    content: "\e005";
+}
