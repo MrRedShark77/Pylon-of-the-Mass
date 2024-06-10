@@ -29,7 +29,7 @@ function calc(dt) {
     }
 
     if (hasUpgrade("A7")) {
-        if (tmp.eed.dimensions.gt(1)) player.eed.ticks = player.eed.ticks.add(tmp.eed.tickspeed.mul(dt));
+        if (tmp.eed.dimensions.gt(1)) player.eed.ticks = player.eed.ticks.add(tmp.eed.tickspeed.mul(dt)).max(0);
     }
 
     for (let id of tmp.auto_upg) buyUpgrade(id, false, true);
@@ -44,7 +44,7 @@ function calc(dt) {
         if (Math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2) < 20) camera_lerp.active = false
     }
 
-    if (hasUpgrade("END1")) player.meta.energy = player.meta.energy.add(tmp.currency_gain.meta);
+    if (hasUpgrade("END1")) player.meta.energy = player.meta.energy.add(tmp.currency_gain.meta).max(0);
 
     player.time += dt
 

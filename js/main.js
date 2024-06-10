@@ -222,7 +222,7 @@ const TABS = [
             let h = `
             <p><h4>Pylon of the Mass</h4></p>
             <div style="width: 100%; text-align: left;">
-                Created by <b>MrRedShark77</b><br><br>
+                Created by <b>MrRedShark77</b> | Version <b>1.0.1</b><br><br>
                 <a href="https://discord.gg/mrredshark77-club-710184682620190731"><b>Discord</b></a><br>
                 <a href="https://boosty.to/mrredshark77/donate"><b>Donate (Boosty)</b></a>
                 <br><br>

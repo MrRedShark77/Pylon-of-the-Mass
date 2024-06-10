@@ -210,8 +210,8 @@ const CURR_GRIDS = ['energy','energy_r','star','energy_g','psi','meta']
 
 function gainCurrency(id,amt) {
     var curr = CURRENCIES[id]
-    curr.amount = curr.amount.add(amt)
-    if ('total' in curr) curr.total = curr.total.add(amt)
+    curr.amount = curr.amount.add(amt).max(0)
+    if ('total' in curr) curr.total = curr.total.add(amt).max(0)
 }
 
 function createCurrencyGridElement(id) {
@@ -352,7 +352,7 @@ function doReset(id, force) {
     var reset = RESETS[id], curr = CURRENCIES[id]
 
     if (force || reset.unl() && CURRENCIES[reset.require_curr].amount.gte(reset.require)) {
-        if (!force) curr.amount = curr.amount.add(tmp.currency_gain[id])
+        if (!force) curr.amount = curr.amount.add(tmp.currency_gain[id]).max(0)
 
         reset.doReset()
     }

@@ -436,7 +436,7 @@ const UPGRADES = {
 
         get base() { return Decimal.add(1, simpleUpgradeEffect("E7",0)) },
 
-        get desc() { return `Increase the base of <b>A2</b> by <b>+${format(this.base)}</b> per level.` },
+        get desc() { return `Increase the base of <b>C7</b> by <b>+${format(this.base)}</b> per level.` },
         curr: "energy_r",
 
         cost: a => Decimal.pow(10,a.pow(2)).mul(1e15),
