@@ -85,7 +85,7 @@ const UPGRADES = {
         unl: () => hasUpgrade("A3"),
         pos: [2,0],
 
-        desc: `Improve <b>A3</b> better.`,
+        desc: `Improve <b>A3</b>.`,
         curr: "energy",
 
         cost: E(1e15),
@@ -731,7 +731,7 @@ const UPGRADES = {
         unl: () => hasUpgrade("F1"),
         pos: [19,40],
 
-        desc: `Start with the refined energy generation (upgrade <b>C13</b>) unlocked on reset. Improves the formula of refined energy better.`,
+        desc: `Start with the refined energy generation (upgrade <b>C13</b>) unlocked on reset. Improves the formula of refined energy.`,
         curr: "energy_g",
 
         cost: E(100),
@@ -855,7 +855,7 @@ const UPGRADES = {
         unl: () => hasUpgrade("F11"),
         pos: [23,37],
 
-        desc: `Improve <b>F10</b> better.`,
+        desc: `Improve <b>F10</b>.`,
         curr: "energy_g",
 
         cost: E(1e250),
@@ -975,7 +975,7 @@ const UPGRADES = {
         unl: () => hasUpgrade("G5"),
         pos: [39,19],
 
-        desc: `Improve <b>G2</b> better.`,
+        desc: `Improve <b>G2</b>.`,
         curr: "psi",
 
         cost: E(1e39),
@@ -1292,7 +1292,7 @@ const UPGRADES = {
         unl: () => player.meta.energy.gte(216),
         pos: [40,39],
 
-        desc: `Improve the first four meta-particle's effects better.`,
+        desc: `Improve the first four meta-particle's effects.`,
         curr: "meta_p",
 
         cost: E(1e108),
@@ -1317,7 +1317,7 @@ const UPGRADES = {
         unl: () => hasUpgrade("END1"),
         pos: [34,34],
 
-        desc: `Improve meta-particles gain better.`,
+        desc: `Improve meta-particles gain.`,
         curr: "meta",
 
         cost: E(1.586e51),
