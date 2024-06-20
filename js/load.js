@@ -110,7 +110,7 @@ function doCreateGridElements() {
 
         html: `
         <button onclick="enterPSI()" class="grid-button">
-        Dialting forces a galactic energy reset. In the dilation, all pre-galactic resources and the tickspeed of <b>EED</b> are reduced by <b>^0.75</b> to the exponent, and upgrades <b>F1</b> & <b>F12</b> don't work. Psi Essence (<b class='iconly-delta'></b>) is generated based on your energy.<br><br><div id="psi-text"></div>
+        Dilating forces a galactic energy reset. In the dilation, all pre-galactic resources and the tickspeed of <b>EED</b> are reduced by <b>^0.75</b> to the exponent, and upgrades <b>F1</b> & <b>F12</b> don't work. Psi Essence (<b class='iconly-delta'></b>) is generated based on your energy.<br><br><div id="psi-text"></div>
         </button>
         `,
 
