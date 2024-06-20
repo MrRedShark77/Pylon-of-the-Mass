@@ -133,6 +133,9 @@ const PYLONS = [
     },{
         unl: ()=>hasUpgrade("UNLOCK5"),
         dots: [[40,20],[40,40]],
+    },{
+        unl: ()=>hasUpgrade("AUTO8"),
+        dots: [[20,20],[40,40]],
     },
 ]
 

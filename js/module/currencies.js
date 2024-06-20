@@ -6,7 +6,7 @@ const CURRENCIES = {
         display: `<b class='iconly-bolt'></b>`,
 
         get amount() { return player.energy },
-        set amount(v) { player.energy = v },
+        set amount(v) { player.energy = v.max(0) },
 
         get gain() {
             if (!hasUpgrade("A1")) return E(0);
@@ -42,7 +42,7 @@ const CURRENCIES = {
         name: "Powered Energy",
 
         get amount() { return player.eed.amount },
-        set amount(v) { player.eed.amount = v },
+        set amount(v) { player.eed.amount = v.max(0) },
 
         get gain() {
             if (!hasUpgrade("A7")) return E(0)
@@ -60,7 +60,7 @@ const CURRENCIES = {
         display: `<b class='iconly-bolt-refined'></b>`,
 
         get amount() { return player.refined.energy },
-        set amount(v) { player.refined.energy = v },
+        set amount(v) { player.refined.energy = v.max(0) },
 
         get gain() {
             if (!hasUpgrade("UNLOCK1") || player.energy.lt(RESETS.energy_r.require)) return E(0)
@@ -86,7 +86,7 @@ const CURRENCIES = {
         display: `<b class='iconly-star'></b>`,
 
         get amount() { return player.stars },
-        set amount(v) { player.stars = v },
+        set amount(v) { player.stars = v.max(0) },
 
         get gain() {
             if (!hasUpgrade("UNLOCK2")) return E(0)
@@ -109,7 +109,7 @@ const CURRENCIES = {
         display: `<b class='iconly-nova'></b>`,
 
         get amount() { return player.galactic.energy },
-        set amount(v) { player.galactic.energy = v },
+        set amount(v) { player.galactic.energy = v.max(0) },
 
         get gain() {
             if (!hasUpgrade("UNLOCK3") || player.energy.lt(RESETS.energy_g.require)) return E(0)
@@ -131,7 +131,7 @@ const CURRENCIES = {
         display: `<b class='iconly-delta'></b>`,
 
         get amount() { return player.psi.essence },
-        set amount(v) { player.psi.essence = v },
+        set amount(v) { player.psi.essence = v.max(0) },
 
         get gain() {
             if (!hasUpgrade("G10")) if (!hasUpgrade("UNLOCK4") || !player.psi.active) return E(0)
@@ -154,7 +154,7 @@ const CURRENCIES = {
         display: `<b class='iconly-infinity'></b>`,
 
         get amount() { return player.meta.energy },
-        set amount(v) { player.meta.energy = v },
+        set amount(v) { player.meta.energy = v.max(0) },
 
         get gain() {
             if (!hasUpgrade("UNLOCK5")) return E(0)
